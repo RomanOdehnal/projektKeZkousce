@@ -24,11 +24,11 @@ public class DatabazePojistenych {
 
     public void vytvorPojisteneho() {
         System.out.println("Zadejte jméno pojištěného:");
-        String jmenoZadani = sc.nextLine();
-        String jmeno = jmenoZadani.trim().toLowerCase().substring(0, 1).toUpperCase() + jmenoZadani.substring(1);
+        String jmenoZadani = sc.nextLine().toLowerCase();
+        String jmeno = jmenoZadani.trim().substring(0, 1).toUpperCase() + jmenoZadani.substring(1);
         System.out.println("Zadejte příjmení pojištěného:");
-        String prijmeniZadani = sc.nextLine();
-        String prijmeni = prijmeniZadani.trim().toLowerCase().substring(0, 1).toUpperCase() + prijmeniZadani.substring(1);
+        String prijmeniZadani = sc.nextLine().toLowerCase();
+        String prijmeni = prijmeniZadani.trim().substring(0, 1).toUpperCase() + prijmeniZadani.substring(1);
         System.out.println("Zadejte telefonní číslo:");
         int telefon = Integer.parseInt(sc.nextLine().trim().replace(" ", ""));
         System.out.println("Zadejte věk:");
@@ -53,9 +53,11 @@ public class DatabazePojistenych {
 
     public void vyhledejPojisteneho() {
         System.out.println("Zadejte jméno pojíštěného:");
-        String jmeno = sc.nextLine().trim();
+        String jmenoVyhledani = sc.nextLine().toLowerCase();
+        String jmeno = jmenoVyhledani.trim().substring(0, 1).toUpperCase() + jmenoVyhledani.substring(1);
         System.out.println("Zadejte příjmení pojištěného:");
-        String prijmeni = sc.nextLine().trim();
+        String prijmeniVyhledani = sc.nextLine().toLowerCase();
+        String prijmeni = prijmeniVyhledani.trim().substring(0, 1).toUpperCase() + prijmeniVyhledani.substring(1);
         System.out.println();
         ArrayList<Pojisteny> zaznamy = databaze.najdiPojisteneho(jmeno, prijmeni);
         if (!zaznamy.isEmpty()) {
