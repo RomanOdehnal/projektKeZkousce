@@ -1,15 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
 package cz.itnetwork.evidencepojisteni;
 
 import java.util.Scanner;
 
 /**
+ * @author Roman Odehnal
  *
- * @author roman odehnal
- * 
+ * Hlavní třída aplikace pro evidenci pojištěných osob vytvořené jako projekt k
+ * závěrečné zkoušce. Umožňuje přidávat, vypisovat a vyhledávat pojištěné osoby
+ * v databázi.
+ *
  */
 public class EvidencePojisteni {
 
