@@ -25,7 +25,6 @@ public class DatabazePojistenych {
     }
 
     // Metoda pro vytvoření nového záznamu o pojištěném v databázi.
-    
     public void vytvorPojisteneho() {
         // vytiskne požadavek pro uživatele, aby zadal jméno pojištěného
         System.out.println("Zadejte jméno pojištěného:");
@@ -48,7 +47,6 @@ public class DatabazePojistenych {
     }
 
     // Metoda pro výpis všech pojištěnců v databázi.
-    
     public void vypisVsechnyPojistene() {
         ArrayList<Pojisteny> zaznamy = databaze.najdiVsechnyPojistene(); // získání všech záznamů o pojištěncích z databáze
         if (!zaznamy.isEmpty()) { // pokud databáze obsahuje záznamy
@@ -57,13 +55,12 @@ public class DatabazePojistenych {
             }
             System.out.println(); // prázdný řádek pro oddělení výpisu
         } else {
-            // Pokud databáze neobsahuje žádné záznamy o pojištěncích
+            // pokud databáze neobsahuje žádné záznamy o pojištěncích
             System.out.println("\nDatabáze neobsahuje žádné pojištěnce. \nPokračujte libovolnou klávesou...\n"); // Výpis chybové hlášky a čekání na jakoukoli klávesu od uživatele
         }
     }
 
     //Metoda pro vyhledání záznamu o pojištěném.
-    
     public void vyhledejPojisteneho() {
         // vytiskne požadavek pro uživatele, aby zadal jméno hledaného pojištěného
         System.out.println("Zadejte jméno pojíštěného:");
@@ -95,5 +92,4 @@ public class DatabazePojistenych {
             System.out.println("\nHledaný pojištěnec nebyl nalezen. \nPokračujte libovolnou klávesou...\n");
         }
     }
-
 }
